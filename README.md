@@ -1,6 +1,6 @@
 <h2 align="center">Chatroom</h4>
 <p align="center">
-  <img width="1280" alt="ChatExample" src="https://github.com/CrisMorinaga/ChatRoom/assets/128830239/c7de7df8-853f-415c-bf03-b4f2b660851f">
+  <img width="1280" alt="ChatRoom" src="https://github.com/CrisMorinaga/ChatRoom/assets/128830239/32003910-a4a1-405c-b955-7668b6f898f3">
 </p>
 
 <p align="center">
