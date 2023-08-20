@@ -48,9 +48,9 @@ export function ConnectToRoom() {
             setButton(true)
         } else {
             setButton(false)
+            setjoinClicked(false)
         }
     }
-
     async function onSubmit(values: z.infer<typeof formSchema>) {
         try{
             const request = await axios.post('/api/socket', {
@@ -86,17 +86,17 @@ export function ConnectToRoom() {
     }    
 
     return (
-        <div className="border rounded-xl mt-4 border-slate-500">
+        <div className="border rounded-xl mt-4 border-white">
             <Form {...form}>
-                <form method="POST" onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 m-4">
+                <form method="POST" onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 m-4 text-white">
                     <FormField
                     control={form.control}
                     name="name"
                     render={({ field }) => (
                         <FormItem>
-                        <FormLabel className="text-xl">Pick a name!</FormLabel>
+                        <FormLabel className="sm:text-xl text-lg">Pick a name!</FormLabel>
                         <FormControl>
-                            <Input className="text-md py-6" autoComplete='name' placeholder="Cool Name" {...field} />
+                            <Input className="text-md sm:py-6 py-3" autoComplete='name' placeholder="Cool Name" {...field} />
                         </FormControl>
                         <FormMessage className="text-sm"/>
                         </FormItem>
@@ -107,17 +107,17 @@ export function ConnectToRoom() {
                         control={form.control}
                         name="roomCode"
                         render={({ field }) => (
-                            <FormItem>
-                                <FormLabel className="text-xl">Room Code</FormLabel>
-                                <FormDescription className="text-sm "> Use your 4 digit code if you have one. </FormDescription>
+                            <FormItem className=" sm:col-auto col-span-2">
+                                <FormLabel className="sm:text-xl text-lg">Room Code</FormLabel>
+                                <FormDescription className="sm:text-sm text-xs text-white"> Use your 4 digit code if you have one. </FormDescription>
                                 <FormControl onChange={(event) => handleChange((event.target as HTMLInputElement).value)}>
-                                    <Input className="text-md py-6" autoComplete='name' placeholder="Code" {...field} />
+                                    <Input className="text-md sm:py-6 py-3" autoComplete='name' placeholder="Code" {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
                         )}
                         />
-                        <Button onClick={() => setjoinClicked(true)} type="submit" className={`self-end p-6 text-lg`} disabled={!button}>Join a Room</Button>
+                        <Button onClick={() => setjoinClicked(true)} type="submit" className={`self-end sm:p-6 sm:text-lg p-3 text-sm`} disabled={!button}>Join a Room</Button>
                     </div>
                     <Button className="w-full p-6 text-lg" type="submit">Create a Room</Button>
                 </form>

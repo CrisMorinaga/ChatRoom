@@ -38,5 +38,8 @@
   "optionalDependencies": {
     "bufferutil": "^4.0.7",
     "utf-8-validate": "^5.0.10"
+  },
+  "devDependencies": {
+    "daisyui": "^3.5.1"
   }
 }

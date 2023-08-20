@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     title: 'Chat Room',
-    description: 'A chat room using web sockets',
+    description: 'A chat room build using web sockets',
 }
 
 export default function RootLayout({

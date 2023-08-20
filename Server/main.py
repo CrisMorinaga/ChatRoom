@@ -57,7 +57,7 @@ class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey("Users.id"))
     room_id = db.Column(db.String(4), db.ForeignKey("Rooms.id"))
-    message = db.Column(db.String(50), nullable=False)
+    message = db.Column(db.String(200), nullable=False)
     date_added = db.Column(db.DateTime, default=datetime.now)
 
     room = relationship("Room", back_populates="messages", foreign_keys=[room_id])
@@ -92,6 +92,7 @@ def home():
         db.session.commit()
 
     room = code
+    print(join)
     if not join:
         room = generate_unique_code(4)
         create_room = Room(id=room)
@@ -152,7 +153,7 @@ def client_connect(data):
                 content = {
                     "name": user_name.username.title(),
                     "message": msg.message,
-                    "date": msg.date_added.strftime("%H:%M")
+                    "date": msg.date_added.strftime("%H:%M"),
                 }
                 send(content, to=user_socket_id)
         send({"name": name, "message": "has entered the room.", "date": datetime.now().strftime("%H:%M"),
@@ -177,7 +178,7 @@ def message(data):
     content = {
         "name": name,
         "message": msg,
-        "date": new_message.date_added.strftime("%H:%M")
+        "date": new_message.date_added.strftime("%H:%M"),
     }
     send(content, to=room)
     print(f'{name} said: {msg}')

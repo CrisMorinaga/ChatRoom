@@ -4,8 +4,8 @@ export default function RoomForm() {
 
     return (  
         <>
-            <div className="flex flex-col container p-20 font-bold">
-                <h1 className=" text-4xl">Enter The Chat Room</h1>
+            <div className="flex flex-col container p-10 mt-4 font-bold">
+                <h1 className="sm:text-4xl text-2xl text-white">Enter The Chat Room</h1>
                 <ConnectToRoom />
             </div>
         
