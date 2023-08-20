@@ -6,7 +6,6 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#understanding-the-code">Understanding the code</a>
   <a href="#tech-stack">Tech Stack</a>
 </p>
 
