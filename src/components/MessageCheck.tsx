@@ -18,7 +18,7 @@ export default function MessageCheck({name, userName, message, date}: Props) {
                     </div>
                 </div>
                 <div>
-                    <div className={`daisychat-header ${userMessage ? '' : 'ml-2'}`}>
+                    <div className={`daisychat-header ${userMessage ? 'flex flex-row justify-end items-center' : 'ml-2'}`}>
                         {name}
                         <time className="mx-2 text-xs opacity-50">{date}</time>
                     </div>
