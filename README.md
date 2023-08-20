@@ -21,7 +21,17 @@
 
 ## How To Use
 
-Clone this repo, install the requirements for both Python and Typescript and run the project!
+1) Clone this repo, and install the requirements for both Python and Typescript.
+2) Create a .env file and fill it with your own secret information.
+   ```
+    # FLASK ENV
+    SECRET_KEY=Your own super secret key
+    DATABASE_URL=Your postgresql db link
+    # NEXT.JS ENV
+    NEXT_PUBLIC_SERVER=Your link to your Python server, use this one if your Python server is running
+                       locally with the usual port: http://127.0.0.1:5000
+    ```
+3) Run the project and that's it!
 
 <img width="1280" alt="MainRoom" src="https://github.com/CrisMorinaga/ChatRoom/assets/128830239/b073b344-0f06-47a1-9257-4a1332af1564">
 
