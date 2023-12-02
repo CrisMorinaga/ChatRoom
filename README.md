@@ -60,6 +60,6 @@
 
 ---
 
-> Linkedin [@Cristopher Morales](www.linkedin.com/in/cristopher-morales-c)
+> Linkedin [@Cristopher Morales](https://www.linkedin.com/in/morales-cristopher)
 
 
